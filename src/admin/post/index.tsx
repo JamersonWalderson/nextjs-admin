@@ -1,4 +1,4 @@
-import { Create, Datagrid, List, ReferenceField, SimpleForm, TextField, TextInput } from 'react-admin';
+import { Create, Datagrid, Edit, List, ReferenceField, SimpleForm, TextField, TextInput } from 'react-admin';
 
 export const PostList = () => (
     <List>
@@ -19,4 +19,14 @@ export const PostCreate = () => (
             <TextInput source="body" />
         </SimpleForm>
     </Create>
+);
+
+export const PostEdit = () => (
+    <Edit>
+        <SimpleForm>
+            <TextInput source="id" disabled />
+            <TextInput source="title" />
+            <TextInput source="body" />
+        </SimpleForm>
+    </Edit>
 );
